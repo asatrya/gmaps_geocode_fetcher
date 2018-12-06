@@ -36,23 +36,23 @@ with open(input_file) as csv_file:
 				type_tingkat_4 = "kelurahan"
 			else:
 				type_tingkat_4 = "desa"
-			geocode_kelurahan = str(gmaps.geocode(type_tingkat_4 + " " + str_kelurahan))
-			f = open(output_dir + "/geocode_kelurahan_{}.json".format(str_kelurahan), "w")
+			geocode_kelurahan = str(gmaps.geocode(type_tingkat_4 + " " + str_kelurahan.replace("/","-")))
+			f = open(output_dir + "/geocode_kelurahan_{}.json".format(str_kelurahan.replace("/","-")), "w")
 			f.write(geocode_kelurahan)
 
 			# geocode kecamatan
-			geocode_kecamatan = str(gmaps.geocode("kecamatan " + str_kecamatan))
-			f = open(output_dir + "/geocode_kecamatan_{}.json".format(str_kecamatan), "w")
+			geocode_kecamatan = str(gmaps.geocode("kecamatan " + str_kecamatan.replace("/","-")))
+			f = open(output_dir + "/geocode_kecamatan_{}.json".format(str_kecamatan.replace("/","-")), "w")
 			f.write(geocode_kecamatan)
 
 			# geocode kota
-			geocode_kota = str(gmaps.geocode(str_kota))
-			f = open(output_dir + "/geocode_kota_{}.json".format(str_kota), "w")
+			geocode_kota = str(gmaps.geocode(str_kota.replace("/","-")))
+			f = open(output_dir + "/geocode_kota_{}.json".format(str_kota.replace("/","-")), "w")
 			f.write(geocode_kota)
 
 			# geocode provinsi
-			geocode_provinsi = str(gmaps.geocode("provinsi " + str_provinsi))
-			f = open(output_dir + "/geocode_provinsi_{}.json".format(str_provinsi), "w")
+			geocode_provinsi = str(gmaps.geocode("provinsi " + str_provinsi.replace("/","-")))
+			f = open(output_dir + "/geocode_provinsi_{}.json".format(str_provinsi.replace("/","-")), "w")
 			f.write(geocode_provinsi)
 
 			print "Processing {}".format(row)
