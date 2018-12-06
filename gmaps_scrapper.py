@@ -6,7 +6,7 @@ from utils import file_helpers
 from utils import gcs_helpers as gcs
 
 # config
-gmaps_key = 'AIzaSyAggY6syUBWad_S_K5SaR3wGPV-h5zSXHo'
+gmaps_key = ''
 input_file = 'wilayah_administratif.csv'
 output_dir = 'result'
 
