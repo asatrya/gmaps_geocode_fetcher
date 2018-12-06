@@ -1,0 +1,13 @@
+Include/
+include/
+Lib/
+lib/
+Scripts/
+scripts/
+tcl/
+bin/
+local/
+share/
+*.pyc
+result/
+/*csv
